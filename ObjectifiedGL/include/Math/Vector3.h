@@ -17,10 +17,6 @@ namespace OGL {
 
 		Vector3& operator=(const Vector3& other);
 
-		float magnitude();
-
-		float sqrMagnitude();
-
 		const Vector3 operator+(const Vector3 vec) const; 
 
 		const Vector3 operator-(const Vector3 vec) const;
@@ -34,6 +30,10 @@ namespace OGL {
 		const Vector3 friend operator/(float lhs, const Vector3 rhs);
 
 		static Vector3 Dot(const Vector3 vec1, const Vector3 vec2);
+
+		float magnitude() const;
+
+		float sqrMagnitude() const;
 
 		virtual ~Vector3() { }
 
