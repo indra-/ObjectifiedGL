@@ -33,6 +33,8 @@ namespace OGL {
 
 		static float Dot(const Vector3 &vec1, const Vector3 &vec2);
 
+		static Vector3 Cross(const Vector3 &vec1, const Vector3 &vec2);
+
 		static float Distance(const Vector3 &vec1, const Vector3 &vec2);
 
 		float magnitude() const;

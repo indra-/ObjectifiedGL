@@ -197,4 +197,29 @@ SUITE(Vector3_tests)
 
 		CHECK_EQUAL(dotSqrt, distance);
 	}
+
+	TEST_FIXTURE(Vector3Fixture, CrossProductTest)
+	{
+		Vector3 temp = Vector3::Cross(vector1, vector2);
+
+		CHECK_EQUAL(temp.x, 5);
+		CHECK_EQUAL(temp.y, 5);
+		CHECK_EQUAL(temp.z, -10);
+
+		// Angle between the cross product and given vectors should be 90deg (cosine 0) in both cases.
+
+		float dotProduct = Vector3::Dot(vector1, temp);
+		float denominator = vector1.magnitude() * temp.magnitude();
+
+		float cosine = dotProduct / denominator;
+		
+		CHECK_EQUAL(cosine, 0);
+
+		dotProduct = Vector3::Dot(vector2, temp);
+		denominator = vector2.magnitude() * temp.magnitude();
+
+		cosine = dotProduct / denominator;
+
+		CHECK_EQUAL(cosine, 0);
+	}
 }

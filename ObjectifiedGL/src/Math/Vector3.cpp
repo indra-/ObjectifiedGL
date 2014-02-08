@@ -77,4 +77,14 @@ namespace OGL {
 		// |p-q| = sqrt( (p-q) * (p-q) )
 		return sqrt( Vector3::Dot(vec1-vec2, vec1-vec2) );
 	}
+
+	Vector3 Vector3::Cross(const Vector3 &vec1, const Vector3 &vec2) 
+	{
+		// V x U = [x,y,z] x [x´,y´,z´] = [ yz´-zy´, zx'-xz´, xy´-yx´ ]
+		float x = vec1.y*vec2.z - vec1.z*vec2.y;
+		float y = vec1.z*vec2.x - vec1.x*vec2.z;
+		float z = vec1.x*vec2.y - vec1.y*vec2.x;
+
+		return Vector3(x,y,z);
+	}
 }
