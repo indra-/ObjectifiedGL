@@ -20,25 +20,17 @@ namespace OGL {
 		Vector2& operator=(const Vector2& other);
 
 		const Vector2 operator+(const Vector2 &vec) const; 
-
 		const Vector2 operator-(const Vector2 &vec) const;
-
 		const Vector2 friend operator*(const Vector2 &lhs, const float &rhs);
-
 		const Vector2 friend operator*(const float &lhs, const Vector2 &rhs);
-
 		const Vector2 friend operator/(const Vector2 &lhs, const float &rhs);
-
 		const Vector2 friend operator/(const float &lhs, const Vector2 &rhs);
 
 		static float Dot(const Vector2 &vec1, const Vector2 &vec2);
-
 		static float Distance(const Vector2 &vec1, const Vector2 &vec2);
 
 		float magnitude() const;
-
 		float sqrMagnitude() const;
-
 		Vector2 normalized() const;
 
 		virtual ~Vector2() { }
