@@ -1,6 +1,6 @@
 #pragma once
 
-#ifndef VEC3_H
-#define VEC3_H
+#ifndef HELPERS_H
+#define HELPERS_H
 
 #endif

@@ -1,4 +1,4 @@
-#include "Math\Vector3.h"
+#include "Math/Vector3.h"
 #include <math.h>
 
 namespace OGL {
