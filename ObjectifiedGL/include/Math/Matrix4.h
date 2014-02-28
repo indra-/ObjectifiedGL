@@ -17,6 +17,8 @@ namespace OGL {
 					float a10, float a11, float a12, float a13, 
 					float a20, float a21, float a22, float a23,
 					float a30, float a31, float a32, float a33);
+			Matrix4(const float mat[16]);
+			Matrix4(const float mat[4][4]);
 			Matrix4(const Matrix4& other);
 			virtual ~Matrix4() {};
 	
@@ -37,8 +39,7 @@ namespace OGL {
 			Matrix4 transpose() const;
 			Matrix4 determinant() const;
 
-			private: 
-				float data[4][4];
+			float m_data[4][4];
 	};
 }
 
